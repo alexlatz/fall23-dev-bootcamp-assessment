@@ -1,3 +1,17 @@
 /* Your Styles Here */
-body{
+body {
+    display: flex;
+    justify-content: center;
+}
+.profile-picture-carousel {
+    display: flex;
+    width: 20rem;
+    height: 20rem;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 15px solid #e5e5e5;
+}
+.profile-picture > img {
+    margin-top: -160px;
+    margin-left: -5px;
 }
