@@ -1,17 +1,61 @@
 /* Your Styles Here */
 body {
     display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+.carousel-links {
+    display: flex;
+    margin-top: 30px;
+    gap: 10px;
+}
+.carousel-links > a {
+    display: flex;
+    align-items: center;
     justify-content: center;
+    border-radius: 50%;
+    background: #e5e5e5;
+    width: 30px;
+    height: 30px;
+    text-decoration: none;
+    color: black;
 }
 .profile-picture-carousel {
     display: flex;
     width: 20rem;
     height: 20rem;
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
     border-radius: 50%;
     border: 15px solid #e5e5e5;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+.profile-picture-carousel::-webkit-scrollbar {
+    display: none;
+}
+.carousel-picture {
+    scroll-snap-align: start;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 1s;
+}
+.carousel-picture > img {
+    max-width: 20rem
 }
 .profile-picture > img {
     margin-top: -160px;
-    margin-left: -5px;
+}
+.normandy > img {
+    margin-top: -225px;
+}
+.zermatt > img {
+    margin-top: -100px;
+}
+.monaco > img {
+    margin-top: -150px;
+}
+.blueridge > img {
+    padding-top: 50px;
 }
