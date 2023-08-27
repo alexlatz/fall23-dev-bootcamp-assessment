@@ -5,6 +5,9 @@ body {
     gap: 30px;
     align-items: center;
 }
+html, body { 
+    scroll-behavior: smooth
+}
 .carousel-links {
     display: flex;
     margin-top: 30px;
@@ -21,6 +24,31 @@ body {
     text-decoration: none;
     color: black;
 }
+.textbox-info {
+    display: flex;
+    width: 40rem;
+    height: 20rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-radius: 25%;
+    border: 15px solid #e5e5e5;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.carousel-text {
+    min-width: 40rem;
+    height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 1s;
+}
+.textbox-info::-webkit-scrollbar {
+    display: none;
+}
 .profile-picture-carousel {
     display: flex;
     width: 20rem;
@@ -31,6 +59,8 @@ body {
     border: 15px solid #e5e5e5;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 .profile-picture-carousel::-webkit-scrollbar {
     display: none;
@@ -55,7 +85,4 @@ body {
 }
 .monaco > img {
     margin-top: -150px;
-}
-.blueridge > img {
-    padding-top: 50px;
 }
