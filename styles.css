@@ -40,8 +40,8 @@ html, body {
 }
 .textbox-info {
     display: flex;
-    width: 40em;
-    height: 25em;
+    width: 40rem;
+    height: 25rem;
     overflow-x: auto;
     overflow-y: hidden;
     border: 7px solid white;
@@ -52,8 +52,8 @@ html, body {
     background-color: white;
 }
 .carousel-text {
-    min-width: 40em;
-    height: 30em;
+    min-width: 40rem;
+    height: 30rem;
     display: flex;
     justify-content: center;
     scroll-snap-align: start;
@@ -82,8 +82,8 @@ html, body {
 }
 .profile-picture-carousel {
     display: flex;
-    width: 20em;
-    height: 20em;
+    width: 20rem;
+    height: 20rem;
     overflow-x: auto;
     overflow-y: hidden;
     border-radius: 50%;
