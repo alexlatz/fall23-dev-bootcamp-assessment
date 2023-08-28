@@ -1,5 +1,11 @@
 /* Your Styles Here */
+:root {
+    --vanilla: #d6d19aff;
+    --faded-vanilla: #f9f8d1
+}
 body {
+    background-image: linear-gradient(var(--vanilla), var(--faded-vanilla));
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -8,55 +14,81 @@ body {
 html, body { 
     scroll-behavior: smooth
 }
-.carousel-links {
-    display: flex;
-    margin-top: 30px;
-    gap: 10px;
-}
-.carousel-links > a {
+.upper-divider {
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: #e5e5e5;
-    width: 30px;
-    height: 30px;
-    text-decoration: none;
-    color: black;
+    gap: 30px;
+}
+.next-arrow > img {
+    height: 120px;
+}
+.prev-arrow > img {
+    height: 120px;
+    transform: scaleX(-1);
+}
+.arrow-inactive {
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+.next-arrow:active:not(.arrow-inactive) {
+    transform: translateX(10px);
+    transition: transform 0.5s;
+}
+.prev-arrow:active:not(.arrow-inactive) {
+    transform: translateX(-10px);
+    transition: transform 0.5s;
 }
 .textbox-info {
     display: flex;
-    width: 40rem;
-    height: 20rem;
+    width: 40em;
+    height: 25em;
     overflow-x: auto;
     overflow-y: hidden;
-    border-radius: 25%;
-    border: 15px solid #e5e5e5;
+    border: 7px solid white;
+    border-radius: 50px 50px 0 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     -ms-overflow-style: none;
     scrollbar-width: none;
+    background-color: white;
 }
 .carousel-text {
-    min-width: 40rem;
-    height: 20rem;
+    min-width: 40em;
+    height: 30em;
     display: flex;
     justify-content: center;
-    align-items: center;
     scroll-snap-align: start;
     transform-origin: center center;
     transform: scale(1);
     transition: transform 1s;
+}
+.carousel-text > p {
+    max-width: 80%;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+}
+.name-text {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 1000;
+    font-size: 50px;
+    margin: 20px 0 0 0;
+    color: 000;
+}
+.photo-desc {
+    font-size: large;
+    padding-top: 150px;
 }
 .textbox-info::-webkit-scrollbar {
     display: none;
 }
 .profile-picture-carousel {
     display: flex;
-    width: 20rem;
-    height: 20rem;
+    width: 20em;
+    height: 20em;
     overflow-x: auto;
     overflow-y: hidden;
     border-radius: 50%;
-    border: 15px solid #e5e5e5;
+    border: 7px solid white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     -ms-overflow-style: none;

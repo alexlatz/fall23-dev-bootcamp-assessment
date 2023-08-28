@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <div class="carousel-links">
-            <a class="left" onclick="prevSlide()">Left</a>
-            <a class="right" onclick="nextSlide()">Right</a>
-        </div>
 
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <title>Alex Latz Bits of Good Demo</title>
+</head>
+
+<body>
+    <p class="name-text">Alex Latz</p>
+    <div class="upper-divider">
+        <a class="prev-arrow arrow-inactive" onclick="prevSlide()">
+            <img src="arrow.png" />
+        </a>
         <div class="syncscrolllead profile-picture-carousel">
             <div id="slide1" class="profile-picture carousel-picture">
                 <img src="profilephoto.jpeg" alt="Profile Picture">
@@ -27,27 +31,58 @@
                 <img src="neworleans.jpeg" alt="Photo from record store in New Orleans">
             </div>
         </div>
-        <div class="syncscrollfollow textbox-info">
-            <div class="carousel-text">
-                <p>Test 1</p>
-            </div>
-            <div class="carousel-text">
-                <p>Test 2</p>
-            </div>
-            <div class="carousel-text">
-                <p>Test 3</p>
-            </div>
-            <div class="carousel-text">
-                <p>Test 4</p>
-            </div>
-            <div class="carousel-text">
-                <p>Test 5</p>
-            </div>
+        <a class="next-arrow" onclick="nextSlide()">
+            <img src="arrow.png" />
+        </a>
+    </div>
+    <div class="syncscrollfollow textbox-info">
+        <div class="carousel-text">
+            <p>Hey there! I'm Alex Latz - I'm a second-year CS major from Atlanta and I'm passionate about jumping
+                head-first into
+                programming problems (like this little demo)!<br><br>
+                I'm not the best at front-end design, but I have
+                experience working as a full-stack developer using Vue/PHP/SQL with Recz, an Atlanta home service
+                provider startup. This past summer, I interned at Ansys with their Data Services team, working on a ML
+                model and data collection pipelines.<br><br>
+                In the past, I've volunteered with Trees Atlanta to help rejuvenate Atlanta's greenery
+                and maintain our title as the "city in the forest!"" <br><br>
+                In my free time, I love watching baseball (go cardinals!), gardening, and travel!<br><br>
+                Click the navigation arrows next to my photo to see some of my travels this past year!
+            </p>
         </div>
+        <div class="carousel-text">
+            <p style="padding-top: 60px;">Last fall, I had the privilege of being part of the FYSA (first-year semester
+                abroad) program.<br><br>
+                This meant that my first semester at Tech was spent at GT Europe in Metz, France, where
+                I had a blast traveling to 19 countries in 4 months!<br><br>
+                In this photo, I'm standing in a bunker in Normandy, France, where the D-Day invasion took place.
+                We had to take a crazy train itinerary to make this a day trip, and ended up pulling an all-nighter in
+                Paris later that day!
+            </p>
+        </div>
+        <div class="carousel-text photo-desc">
+            <p>Here's the view from a nine-hour hike I took in Zermatt, Switzerland for fall break!</p>
+        </div>
+        <div class="carousel-text photo-desc">
+            <p>Later that week, I took a long train to Monaco, where I dressed up like James Bond with friends and went
+                to the famous Monte Carlo casino! The harbor view was a little ridiculous.</p>
+        </div>
+        <div class="carousel-text photo-desc" style="padding-top: 100px;">
+            <p>This spring break, I drove to New Orleans to explore the city and see its vibrant culture! I'm a
+                big fan of music, so I had a blast exploring the city's music scene and record stores.<br><br>
+                Thanks for clicking through my demo! I hope I can have the opportunity to contribute and grow as a
+                programmer through web development with Bits of Good!
+            </p>
+        </div>
+    </div>
 
-    </body>
-    <footer>
-        <script src="carousel.js"></script>
-    </footer>
-<!-- Your HTML Here -->
+</body>
+<footer>
+    <script src="carousel.js"></script>
+    <script>
+        document.querySelector(".syncscrolllead").scrollLeft = 0
+        document.querySelector(".syncscrollfollow").scrollLeft = 0
+    </script>
+</footer>
+
 </html>
